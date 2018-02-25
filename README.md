@@ -1,6 +1,8 @@
 # im_futuretest_flask
 These are the flask utilities for the im_futuretest library. If your project uses flask, this is the package you want.
   
+[![Build Status](https://travis-ci.org/emlynoregan/im_futuretest_flask.svg?branch=master)](https://travis-ci.org/emlynoregan/im_futuretest_flask)
+
 ## Install 
 
 Use the python package for this library. You can find the package online [here](https://pypi.org/project/im-futuretest/).
