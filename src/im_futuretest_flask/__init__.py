@@ -16,7 +16,7 @@ def set_base_route(base_route):
     global _base_route
     _base_route = base_route
 
-def register_tests_api(app):
+def register_futuretest_handlers(app):
     @app.route(_create_route("ui/"), methods=["GET"])
     def webroot():
         lcontent_type = "text/html"

@@ -59,11 +59,11 @@ Do it like this:
 
 	... add other handlers to your app, etc ...
 
-	register_tests_api(app) # this adds IM Future Test's handlers
+	register_futuretest_handlers(app) # this adds IM Future Test's handlers
 
 	... do more stuff with app ...
 
-ie: just call register_tests_api(app) somewhere in main.py
+ie: just call register_futuretest_handlers(app) somewhere in main.py
 
 ### Accessing the UI
 
