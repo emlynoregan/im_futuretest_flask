@@ -45,8 +45,35 @@ tests; it's best not to open that up to all comers!
 
 ### main.py
 
-Now traffic is going to the app constructed in main.py, so how 
+Now traffic is going to the app constructed in main.py.
 
-TBD
+Next we need to register the futuretest flask handlers with your app.
+
+Do it like this:
+
+	from flask import Flask
+	from flaskhandlers import register_tests_api
+	... other imports ...
+
+	app = Flask(__name__)  # creating your app
+
+	... add other handlers to your app, etc ...
+
+	register_tests_api(app) # this adds IM Future Test's handlers
+
+	... do more stuff with app ...
+
+ie: just call register_tests_api(app) somewhere in main.py
+
+### Accessing the UI
+
+Go to the url
+
+	http(s)://<yourdomain>/futuretest/ui
+	
+and you'll see the UI:
+
+![IM Future Test screenshot](https://lh6.googleusercontent.com/Q5XUfYdQ6ZkJSjSFdcDz5AQieAv7c-f_pwrVBtFuv0p_UC46yBh5ijC1SL8qu1pgsyzJPf-hFrGV2w=w1615-h935 "IM Future Test screenshot")
+
 
  
