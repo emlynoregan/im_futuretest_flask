@@ -5,11 +5,11 @@ These are the flask utilities for the im_futuretest library. If your project use
 
 ## Install 
 
-Use the python package for this library. You can find the package online [here](https://pypi.org/project/im-futuretest/).
+Use the python package for this library. You can find the package online [here](https://pypi.org/project/im-futuretest-flask/).
 
 Change to your Python App Engine project's root folder and do the following:
 
-> pip install appenginetaskutils --target lib
+> pip install im_futuretest_flask --target lib
 
 Or add it to your requirements.txt. You'll also need to set up vendoring, see [app engine vendoring instructions here](https://cloud.google.com/appengine/docs/python/tools/using-libraries-python-27).
 
@@ -75,7 +75,7 @@ Go to the url
 	
 and you'll see the UI:
 
-![IM Future Test screenshot](https://lh6.googleusercontent.com/Q5XUfYdQ6ZkJSjSFdcDz5AQieAv7c-f_pwrVBtFuv0p_UC46yBh5ijC1SL8qu1pgsyzJPf-hFrGV2w=w1615-h935 "IM Future Test screenshot")
+![IM Future Test screenshot](http://i433.photobucket.com/albums/qq59/emlynoregan/im_futuretest.png "IM Future Test screenshot")
 
 
  
