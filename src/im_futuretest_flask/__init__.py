@@ -5,6 +5,7 @@ from im_futuretest import get_test_by_name, get_tests, get_testrun_by_id,\
 import json
 import logging
 import mimetypes
+from google.appengine.ext import ndb
 
 _base_route = "futuretest"
 
@@ -113,3 +114,31 @@ def register_futuretest_handlers(app):
                         return "ok", 200
             else:
                 return "unknown action %s" % laction, 400
+
+    @app.route(_create_route("future"), methods=["GET"])
+    def future_api():
+        lfutureKeyUrlSafe = request.args.get('futurekey')
+        lincludeChildren = request.args.get('include_children')
+    
+        logging.info("lfutureKeyUrlSafe=%s" % lfutureKeyUrlSafe)
+        logging.info("lincludeChildren=%s" % lincludeChildren)
+        
+        lfutureKey = ndb.Key(urlsafe = lfutureKeyUrlSafe)
+        
+        lfuture = lfutureKey.get()
+        
+        def keymap(future, level):
+            return future.key.urlsafe()
+                
+        lfutureJson = lfuture.to_dict(maxlevel=2 if lincludeChildren else 1, futuremapf = keymap) if lfuture else None
+        
+        if lfutureJson:
+            lfutureJson["futurekey"] = lfutureJson["key"]
+            del lfutureJson["key"]
+    
+            lchildren = lfutureJson.get("zchildren") or [];
+            for lchild in lchildren:
+                lchild["futurekey"] = lchild["key"]
+                del lchild["key"]
+            
+        return jsonify(lfutureJson)

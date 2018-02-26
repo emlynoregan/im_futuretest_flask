@@ -8,7 +8,7 @@ except ImportError:
 
 dist = setup(
     name='im_futuretest_flask',
-    version='0.1.1',
+    version='0.1.2',
     description='flask handlers for im_futuretask, for Google App Engine, Python standard environment',
     author='Emlyn O\'Regan',
     author_email='emlynoregan@gmail.com',
