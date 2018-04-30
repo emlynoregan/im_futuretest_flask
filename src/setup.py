@@ -8,14 +8,14 @@ except ImportError:
 
 dist = setup(
     name='im_futuretest_flask',
-    version='0.1.2',
+    version='0.1.3',
     description='flask handlers for im_futuretask, for Google App Engine, Python standard environment',
     author='Emlyn O\'Regan',
     author_email='emlynoregan@gmail.com',
     url='https://github.com/emlynoregan/im_futuretest_flask',
     license='../LICENSE.txt',
     packages=['im_futuretest_flask'],
-    install_requires=['im_futuretest >= 0.1.3', 'flask', 'werkzeug==0.12.2'],
+    install_requires=['im_futuretest >= 0.1.3', 'flask'],#, 'werkzeug==0.12.2'],
     long_description=open('../README.md').read(),
     classifiers=[
         'Development Status :: 3 - Alpha',
